@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English Learner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>English Learner</h1>
+    <p class="api-key-notice" id="apiKeyNotice" style="display:none;">
+      Gemini API Key not set. Please <a href="#" id="openOptionsLink">set it in the options</a>.
+    </p>
+
+    <textarea id="englishText" placeholder="Paste English text here..."></textarea>
+    <button id="processButton">Process Text</button>
+    <div id="loading" style="display:none;">Processing...</div>
+
+    <div id="resultsArea" style="display:none;">
+      <h2>Translation (Japanese)</h2>
+      <div id="translationOutput" class="output-box"></div>
+
+      <h2>Frequent Words</h2>
+      <ul id="frequentWordsOutput" class="output-box word-list"></ul>
+
+      <h2>Word Details</h2>
+      <div id="wordDetailOutput" class="output-box">
+        <strong id="selectedWordDisplay"></strong>
+        <p id="wordDefinition"></p>
+        <p id="wordExample"></p>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
